@@ -1,13 +1,12 @@
 FROM node:8
 
-WORKDIR /opt/fish
+WORKDIR /opt/fish/backend
 
 COPY package.json ./
 COPY yarn.lock ./
 RUN yarn
 
 COPY . .
-RUN yarn build
 
-EXPOSE 3000
-CMD [ "yarn", "start" ]
+EXPOSE 3001
+CMD [ "node", "index.js" ]

