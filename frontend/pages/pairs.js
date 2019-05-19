@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 
 export default () => {
   const [ loading, setLoading ] = useState(true)
@@ -16,6 +17,9 @@ export default () => {
   return (
     <>
       <h1>Password Pairs</h1>
+      <Head>
+        <title>Password Pairs</title>
+      </Head>
       {loading && <p>Loading...</p>}
       <ul>
         {pairs.map(({ email, password }) => (
