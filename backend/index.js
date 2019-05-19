@@ -23,7 +23,7 @@ app.get('/backend/:email/:password', async (req, res) => {
 })
 app.get('/backend/pairs', async (req, res) => {
   const pairs = await getPairs()
-  const json = pairs.split('').map((pair) => {
+  const json = pairs.split('\n').map((pair) => {
     const split = pair.split(':')
     return {
       email: split[0],
