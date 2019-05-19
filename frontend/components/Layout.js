@@ -21,6 +21,7 @@ export default (props) => (
       <SmallButton inline href='https://policies.google.com/terms'>
         Terms
       </SmallButton>
+      <div className='spacer2' />
     </div>
 
     <style jsx global>{`
@@ -57,12 +58,17 @@ export default (props) => (
         display: flex;
         font-size: 12px;
         font-family: 'Roboto', sans-serif;
-        width: 530px;
+        max-width: 530px;
         margin: 0 auto;
         padding-top: 20px;
       }
       .spacer {
         flex: 1;
+      }
+      @media only screen and (max-width: 400px) {
+        .spacer2 {
+          flex: 1;
+        }
       }
     `}</style>
   </>

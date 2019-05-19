@@ -10,8 +10,13 @@ export default (props) => (
         font-family: 'Roboto', sans-serif;
         border: 1px solid #dadce0;
         border-radius: 8px;
-        width: 450px;
+        max-width: 450px;
         margin: 0 auto;
+      }
+      @media only screen and (max-width: 400px) {
+        .box {
+          border: none;
+        }
       }
     `}</style>
   </div>
