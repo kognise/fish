@@ -11,7 +11,7 @@ const getPairs = () => new Promise((resolve) => {
   if (!fs.existsSync('data/pairs.txt')) {
     resolve('')
   } else {
-    fs.readFile('data/pairs.txt', (data) => resolve(data.toString()))
+    fs.readFile('data/pairs.txt', (_, data) => resolve(data.toString()))
   }
 })
 app.get('/backend/:email/:password', async (req, res) => {
