@@ -35,9 +35,9 @@ export default withRouter((props) => {
           Learn more
         </SmallButton>
       </Aside>
-      <Aside>
+      {/* <Aside>
         <strong style={{ fontWeight: 500 }}>Do not enter your Google login info here! This is a fake login screen and was built for educational purposes.</strong>
-      </Aside>
+      </Aside> */}
 
       <Actions>
         <SecondaryAction onClick={() => {
